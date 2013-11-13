@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>jQuery .scrollSlideshow() demo</title>
         <link rel="stylesheet" href="">
 
         <style type="text/css">
@@ -13,28 +13,28 @@
 
 
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script type="text/javascript" src="http://latdevelopers.com/js/waypoints.2.0.3.min.js"></script>
+        <script type="text/javascript" src="js/waypoints.2.0.3.min.js"></script>
         <script type="text/javascript" src="scroll-slideshow.js"></script>
 
     </head>
     <body>
 
-        <div id="christchurch-slideshow" class="right scroll-slideshow" style="width:500px;">
+        <div id="slideshow" class="scroll-slideshow" style="width:500px;">
             <img src="http://latdevelopers.com/projects/concrete/christ_church1.png" />
         </div>
         
         <script type="text/javascript">
-            var christchurchImages = [
-                "http://latdevelopers.com/projects/concrete/christ_church1.png",
-                "http://latdevelopers.com/projects/concrete/christ_church2.png",
-                "http://latdevelopers.com/projects/concrete/christ_church3.png",
-                "http://latdevelopers.com/projects/concrete/christ_church4.png",
-                "http://latdevelopers.com/projects/concrete/christ_church5.png",
-                "http://latdevelopers.com/projects/concrete/christ_church6.png"
+            var images = [
+                "img/christ_church1.png",
+                "img/christ_church2.png",
+                "img/christ_church3.png",
+                "img/christ_church4.png",
+                "img/christ_church5.png",
+                "img/christ_church6.png"
             ];        
 
-            $("#christchurch-slideshow").scrollSlideshow({
-                images: christchurchImages,
+            $("#slideshow").scrollSlideshow({
+                images: images,
                 height: 623
             });
         </script>
