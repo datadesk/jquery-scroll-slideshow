@@ -19,6 +19,7 @@
         this.append(mainImage);
 
         mainImage.css({top: topOffset + "px"});
+
         slideshowHolder.height(function(){
             return winHeight * 2 + "px";
         });
@@ -48,7 +49,6 @@
                     'bottom': '',
                 });
 
-                // christchurch.src = images[0];
                 mainImage.attr("src", images[0]);
                 nextSlideIndex = 0;
 
