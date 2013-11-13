@@ -1,20 +1,22 @@
 ( function( $ ) {
 
     $.fn.scrollSlideshow = function( options ) {
-        var $win = $(window),
-            slideshowHolder = this,
-            mainImage = this.find("img");
-
         var settings = $.extend({
             images: false,
             height: 0
         }, options);
 
-        var images = settings.images,
+        var $win = $(window),
+            slideshowHolder = this,
+            mainImage = $("<img src=''/>"),
+            images = settings.images,
             winHeight = getWindowHeight(),
             topOffset = ( winHeight - settings.height )/ 2,
             slideshowFrames = [],
             nextSlideIndex = 0;
+
+        mainImage.attr("src", images[0]);
+        this.append(mainImage);
 
         mainImage.css({top: topOffset + "px"});
         slideshowHolder.height(function(){
