@@ -6,3 +6,8 @@ $.scrollSlideshow() is an extension to the jQuery Waypoints plugin that allows y
 To use
 ------
 
+
+
+To-do
+-----
+

@@ -15,8 +15,9 @@
             slideshowFrames = [],
             nextSlideIndex = 0;
 
-        mainImage.attr("src", images[0]);
-        this.append(mainImage);
+        slideshowHolder.append(mainImage);
+        mainImage.attr("src", images[0]).css("position", "absolute");
+        slideshowHolder.css("position", "relative");
 
         mainImage.css({top: topOffset + "px"});
 

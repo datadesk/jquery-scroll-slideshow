@@ -4,14 +4,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>jQuery .scrollSlideshow() demo</title>
-        <link rel="stylesheet" href="">
 
-        <style type="text/css">
-            .scroll-slideshow {position:relative; min-width:300px;}
-            .scroll-slideshow img {position:absolute;}
-        </style>
-
-
+        <!-- Include jQuery and jQuery Waypoints -->
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script type="text/javascript" src="js/waypoints.2.0.3.min.js"></script>
         <script type="text/javascript" src="scroll-slideshow.js"></script>
@@ -19,9 +13,12 @@
     </head>
     <body>
 
+        <!-- HTML element that will house the slideshow -->
         <div id="slideshow" class="scroll-slideshow"></div>
         
         <script type="text/javascript">
+
+            /* Set the array of images that are passed in to .scrollSlideshow() */
             var images = [
                 "img/election-0.gif",
                 "img/election-1.gif",
@@ -31,6 +28,7 @@
                 "img/election-5.gif"
             ];        
 
+            /* Call .scrollSlideshow() on the element */
             $("#slideshow").scrollSlideshow({
                 images: images,
                 height: 289
