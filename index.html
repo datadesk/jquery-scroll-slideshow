@@ -3,21 +3,59 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <title>jQuery .scrollSlideshow() demo</title>
+
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 
         <!-- Include jQuery and jQuery Waypoints -->
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script type="text/javascript" src="js/waypoints.2.0.3.min.js"></script>
         <script type="text/javascript" src="scroll-slideshow.js"></script>
 
+        <style type="text/css">
+        pre {background-color:transparent; border:none;}
+        </style>
+
     </head>
     <body>
-        <h1>jQuery .scrollSlideshow() demo</h1>
-        <!-- HTML element that will house the slideshow -->
-        <div id="slideshow" class="scroll-slideshow"></div>
-        
-        <script type="text/javascript">
 
+        <div class="container">
+            <!-- HTML element that will house the slideshow -->
+            <div id="slideshow" class="scroll-slideshow" style="width:500px; float:left; margin: 0 20px 0 0;"></div>
+
+            <div class="page-header">
+            <h1>jQuery .scrollSlideshow() demo</h1>
+            <p>$.scrollSlideshow() is an extension to the jQuery Waypoints plugin that allows you to rotate through an array of images as the page is scrolled down/up, as seen on the Los Angeles Times piece, <a href="http://www.latimes.com/local/la-me-earthquake-concrete-20131013-dto,0,1555748.htmlstory" target="_blank">"Concrete risks"</a></p>
+            </div>
+
+            <h2>To use</h2>
+            <ul>
+                <li>Include jQuery, jQuery waypoints and scroll-slideshow.js in your document.</li>
+                <li>Create a div, for example, "div#slideshow" that will hold the images.</li>
+                <li>Define an array that holds the images you want to rotate through. You can include as many images as you need.</li>
+                <li>Call .scrollSlideshow() on the HTML element that will serve as the slideshow holder, passing in the images array and the height of the images.</li>
+            </ul>
+
+            <p>For example:
+            <pre>$("#slideshow").scrollSlideshow({
+    images: images,
+    height: 288.9
+});</pre>
+            </p>
+
+            <h2>Caveats</h2>
+            All the images need to be the same height, and this height must be passed in as the 'height' parameter when calling .scrollSlidseshow().
+
+
+            <h2>To-do</h2>
+            <p>Allow the plugin to render HTML frames.</p>
+            <p>Add the option for manually setting a height to the slideshow holder.</p>
+
+
+        </div>
+        <script type="text/javascript">
             /* Set the array of images that are passed in to .scrollSlideshow() */
             var images = [
                 "img/election-0.gif",
